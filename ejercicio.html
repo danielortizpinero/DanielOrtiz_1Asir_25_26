@@ -1,0 +1,62 @@
+<html>
+<head>
+  <title>Ejemplo de JavaScript</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<script>
+    /* Dados 2 números enteros, visualizar los comprendidos entre ambos 
+       y decir cuántos números negativos hay. Si el primer numero es mayor que el segundo que de mensaje de error, sino que haga todo lo anterior. Sumar los valores en medio de los 2 numeros */
+
+    var num1, num2; 
+
+    num1 = prompt('Ingrese el primer número:');
+    num1 = parseInt(num1);
+    num2 = prompt('Ingrese el segundo número:');
+    num2 = parseInt(num2);
+
+    function Visualizar() {
+       if (num1 > num2){
+          alert ("error");
+       } else {
+
+
+          var inicio, fin;
+          var contadorNegativos = 0;
+          var acumulador = 0;
+
+      
+          if (num1 < num2) {
+              inicio = num1;
+              fin = num2;
+          } else {
+              inicio = num2;
+              fin = num1;
+          }
+
+          document.write("Los números comprendidos son:<br>");
+
+          
+          for (var i = inicio + 1; i < fin; i++) {
+              document.write(i + " ");
+
+           
+              if (i < 0) {
+                  contadorNegativos++;
+              }
+
+            acumulador = acumulador + i;
+          }
+
+          document.write("<br><br>Cantidad de números negativos encontrados: " + contadorNegativo);
+    
+        }
+      }
+
+    Visualizar();
+
+</script>
+
+</body>
+</html>
