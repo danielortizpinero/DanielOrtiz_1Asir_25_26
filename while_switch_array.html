@@ -1,0 +1,30 @@
+<html>
+<head>
+  <title>Ejemplo de JavaScript</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<script>
+//------------FUNCIONES----------
+function Visualizar (tabla_numeros){
+	let sw = 0, i=0;
+	while (sw == 0){
+			if (i == tabla_numeros.length){
+				sw = 1;
+			} else {
+					if (tabla_numeros[i] >= 5){
+						document.write (tabla_numeros[i] + " ");
+					}
+			}		i++;
+	}
+}
+
+//------------PROGRAMA PRINCIPAL------  
+tabla_numeros= [8,5,4,9,1,6];
+Visualizar (tabla_numeros)
+
+</script>
+
+</body>
+</html>
