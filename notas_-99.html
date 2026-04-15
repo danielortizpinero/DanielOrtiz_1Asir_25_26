@@ -1,0 +1,47 @@
+<html>
+<head>
+  <title>Ejemplo de JavaScript</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<script>
+	/*Pedir notas repetidamente hasta que el valor dictado sea -99. Luego visualizar  la nota media de las notas mencionadas*/
+
+//------------FUNCIONES------------------
+function CalcularMedia(){
+	let sw = 0;
+	let suma = 0;
+	let contador = 0;
+	let nota = 0;
+
+	while (sw == 0) {
+    nota = parseInt(prompt("Introduce nota:"));
+
+    if (nota == -99) {
+ 				sw = 1;
+
+ 		} else {
+ 			contador++;
+ 			suma += nota;
+ 		}
+	}
+
+	let media = suma / contador;
+
+	return media;
+}
+
+function Visualizar (media){
+	document.write("La media es " + media);
+}
+
+//------------PROGRAMA PRINCIPAL-----------
+
+Visualizar (CalcularMedia());
+
+</script>
+
+</body>
+</html>
+

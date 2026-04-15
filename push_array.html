@@ -1,0 +1,43 @@
+<html>
+<head>
+  <title>Ejemplo de JavaScript</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<script>
+	/*Pedir notas repetidamente hasta que el valor dictado sea -99. Luego visualizar todas las notas introducidas. Añade un array */
+
+//------------FUNCIONES------------------
+function Notas(){
+	let sw = 0;
+	let nota = 0;
+	let tabla_notas = [];
+
+	while (sw == 0) {
+    nota = parseInt(prompt("Introduce nota:"));
+
+    if (nota == -99) {
+ 				sw = 1;
+
+ 		} else {
+ 			tabla_notas.push(nota)
+ 		}
+	}
+
+	return tabla_notas;
+}
+
+function Visualizar (nota){
+	document.write("Las notas son " + nota);
+}
+
+//------------PROGRAMA PRINCIPAL-----------
+
+tabla_notas= [8,5,4,9,-99,6];
+Visualizar (Notas());
+
+</script>
+
+</body>
+</html>

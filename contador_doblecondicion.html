@@ -1,0 +1,38 @@
+<html>
+<head>
+  <title>Ejemplo de JavaScript</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<script>
+	/*Visualizar numeros del 1 en adelante hasta que el numero introducido sea superior a 100 y multiplo de 7. En ese momento, visualizar cuantos numeros se han visualizado */
+
+//------------FUNCIONES------------------
+function Visualizar(){
+	let sw = 0;
+	let numero = 90;
+
+	while (sw == 0) {
+
+    if (numero > 100 && numero % 7 == 0) {
+ 				sw = 1;
+ 			
+ 		} else {
+ 			document.write(numero + "<br>")
+ 			numero++;
+ 		}
+
+	}
+
+}
+
+
+//------------PROGRAMA PRINCIPAL-----------
+
+Visualizar ();
+
+</script>
+
+</body>
+</html>

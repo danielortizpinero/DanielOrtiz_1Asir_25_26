@@ -1,0 +1,48 @@
+<html>
+<head>
+  <title>Ejemplo de JavaScript</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<script>
+	/*Declarar un array con numeros enteros. Visualizar si el array esta ordenado ascendentemente. Utilizar el switch*/
+
+//------------FUNCIONES------------------
+function Proceso(tabla_numeros){
+	let Ascendente = true
+	let sw = 0;
+	let i = 1;
+
+	while (sw == 0) {
+
+    if (i > tabla_numeros.length) {
+ 				sw = 1;
+ 			
+ 		} else {
+	 			if (tabla_numeros[i] < tabla_numeros[i-1]){
+	 			sw=1
+	 			Ascendente = false;
+	 		}
+ 				i++;
+ 		}
+	}
+	if (Ascendente == true){
+		document.write("Ordenado ascendentemente");
+	}
+	else{
+		document.write("NO Ordenado ascendentemente");
+	}
+}
+
+
+
+//------------PROGRAMA PRINCIPAL-----------
+tabla_numeros=[2,3,4,2,10,20,40];
+Proceso(tabla_numeros)
+
+
+</script>
+
+</body>
+</html>
