@@ -1,0 +1,51 @@
+<html>
+<head>
+  <title>Ejemplo de JavaScript</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<script>
+	/*Declarar 2 arrays con numeros enteros. Visualizar si o no los 2 arrays son iguales (mediante switches)*/
+
+//------------FUNCIONES------------------
+function ComprobarIgualdad(tabla1, tabla2){
+	let sw = 0, i = 0;
+	let iguales = "Sí";
+
+
+	if (tabla1.length != tabla2.length) {
+		iguales = "No";
+	} else {
+		
+		while (sw == 0) {
+			if (i == tabla1.length) {
+				sw = 1; 
+			} else {
+				if (tabla1[i] != tabla2[i]) {
+					iguales = "No";
+					sw = 1; 
+				}
+			}		
+			i++;
+		}
+	}
+
+	return iguales;
+}
+
+function Visualizar (resultado){
+	document.write("¿Los dos arrays son iguales? " + resultado);
+}
+
+//------------PROGRAMA PRINCIPAL-----------
+let tabla1 = [8, 5, 4, 9, 1, 6];
+let tabla2 = [8, 5, 4, 9, 1, 6]; 
+
+
+Visualizar (ComprobarIgualdad(tabla1, tabla2));
+
+</script>
+
+</body>
+</html>

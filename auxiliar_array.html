@@ -1,0 +1,44 @@
+<html>
+<head>
+  <title>Ejemplo de JavaScript</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<script>
+	/*Pedir numeros repetidamente siempre y cuando el numero tecleado sea mayor al anterior tecleado. Cuando se rompa la secuencia, visualizar cuantos numeros se han tecleado y cuales*/
+
+//------------FUNCIONES------------------
+function RecopilarNumeros(){
+  let sw = 0;
+  let lista_numeros = [];
+  let numero_actual = 0;
+  let numero_anterior = -999999; 
+
+  while (sw == 0) {
+    numero_actual = parseInt(prompt("Introduce un número mayor al anterior: "));
+
+    if (numero_actual > numero_anterior) {
+      lista_numeros.push(numero_actual);
+      numero_anterior = numero_actual; 
+    } else {
+      sw = 1; 
+    }
+  }
+
+  return lista_numeros;
+}
+
+function Visualizar(tabla){
+  document.write("Se han tecleado " + tabla.length + " números.<br>");
+  document.write("Los números son: " + tabla);
+}
+
+//------------PROGRAMA PRINCIPAL-----------
+
+Visualizar(RecopilarNumeros());
+
+</script>
+
+</body>
+</html>

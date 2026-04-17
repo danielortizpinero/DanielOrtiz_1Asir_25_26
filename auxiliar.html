@@ -1,0 +1,40 @@
+<html>
+<head>
+  <title>Ejemplo de JavaScript</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<script>
+	/*Pedir datos repetidamente numericos al usuario hasta que se digite -99. Entonces visualizar el mayor de los valores introducidos*/
+
+//------------FUNCIONES------------------
+let aux=-999999;
+let sw=0;
+
+function Numeros(){
+	while(sw == 0){
+		num=ParseInt(prompt("Dame un numero: "));
+		if (num == -99){
+			sw = 1
+		} else{
+				if (num > aux){
+						aux = num;
+				}
+		}
+	}
+
+}
+
+function Visualizar(dato){
+				alert ("el mayor es: " + dato);
+}
+
+//------------PROGRAMA PRINCIPAL-----------
+Visualizar(Numeros());
+
+
+</script>
+
+</body>
+</html>
