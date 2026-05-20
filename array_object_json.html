@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejemplo de JavaScript</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+<script>
+/* Visualizar array de objetos*/
+
+let text = `{"alumnos":[
+{"nombre":"Luis","nota":7},
+{"nombre":"Ana","nota":8},
+{"nombre":"Pedro","nota":9}]
+}`;
+
+const objeto_alumnos = JSON.parse(text);
+
+function guardarAlumnos(objeto_alumnos){
+  array_objetos_alumnos =[]
+  for (let i=0; i<objeto_alumnos.alumnos.length;i++){
+    array_objetos_alumnos.push(objeto_alumnos.alumnos[i]);
+  }
+  return array_objetos_alumnos
+}
+
+function mostrarAlumnos(array_objetos_alumnos){
+  let texto ="";
+
+  for (const key in array_objetos_alumnos){
+    alert(array_objetos_alumnos[key].nombre+" - Nota: "+array_objetos_alumnos[key].nota);
+  }
+}
+mostrarAlumnos(guardarAlumnos(objeto_alumnos))
+
+/*
+let textoJSON = `{
+"alumno1": {
+"nombre": "Ana",
+"edad": 20,
+"nota": 8
+},
+"alumno2": {
+"nombre": "Luis",
+"edad": 22,
+"nota": 7
+}
+}`;
+const alumnos = JSON.parse(textoJSON);
+for(let alumno in alumnos) {
+console.log("Alumno:", alumno);
+for(let propiedad in alumnos[alumno]) {
+console.log(propiedad + ": " + alumnos[alumno][propiedad]);
+}
+console.log("-----------");
+}
+*/
+
+</script>
+</body>
+</html>
+ 

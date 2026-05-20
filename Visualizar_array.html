@@ -1,0 +1,40 @@
+<html>
+<head>
+  <title>Ejemplo de JavaScript</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<script>
+    /*Calcular media de cada alumno, visualizar el nombre de los alumnos,
+    las notas de cada alumno, y suma de todas las notas*/
+
+ const alumnos=[
+    ["Ana", [8,7,9]],
+    ["Luis", [5,2,9]],
+    ["Pedro", [6,5,1]]
+ ];
+
+ for (let i = 0; i < alumnos.length; i++) {
+        let nombre = alumnos[i][0];  
+        let notas = alumnos[i][1];   
+        
+        let sumaNotasAlumno = 0; 
+
+        for (let j = 0; j < notas.length; j++) {
+            sumaNotasAlumno += notas[j]; 
+        }
+
+        let media = sumaNotasAlumno / notas.length;
+
+        console.log("Alumno/a: " + nombre);
+        console.log("Notas: " + notas.join(", ")); 
+        console.log("Suma de sus notas: " + sumaNotasAlumno);
+        console.log("Media: " + media.toFixed(2)); 
+        console.log("-----------------------");
+    }
+
+</script>
+
+</body>
+</html>
